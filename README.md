@@ -1,5 +1,5 @@
 # wc
-## Trolling is an artform. This script is a wrapper for the wc binary printing WC (lavatory) ascii art before doing the work
+This script is a wrapper for the wc binary printing WC (lavatory) ascii art before doing the work
 
 ## Installation:
  TBD - provide a fast and easy revertible way to install it on computers of coworkers not locking them when leaving the room.
