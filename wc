@@ -1,0 +1,105 @@
+#!/bin/bash
+
+function std {
+echo '
+    .__   .-".
+   (o\"\  |  |
+      \_\ |  |
+     _.---:_ |
+    ("-..-" /
+     "-.-" /
+       /   |
+       "--"
+       
+'>&2
+}
+
+function lulu {
+echo '
+  ___|_|___
+ | ––––––– |
+ |(       )|
+ |(       )|
+  \(     )/
+   \\ @ //
+    \\_//
+     \_/
+'>&2
+}
+
+function catlitter {
+cat <<cat-kackt >&2
+                   _..
+  /}_{\           /.-'
+ ( a a )-.___...-'/  
+ ==._.==         ;  
+      \ i _..._ /,  
+ _____|_;/___|_//_______
+/_______________________\ 
+\                       / 
+ \_____________________/ 
+
+cat-kackt
+}
+
+function water-sink {
+cat <<watersink >&2
+                        ___  
+                      .' _ '. 
+                     / /` `\ \ 
+                     | |   [__] 
+                     | |    {{ 
+                     | |    }} 
+                  _  | |  _ {{ 
+      ___________<_>_| |_<_>}}________ 
+          .=======^=(___)=^={{====. 
+         / .----------------}}---. \ 
+        / /                 {{    \ \ 
+       / /                  }}     \ \ 
+      (  '========================='  ) 
+       '-----------------------------' 
+           ALWAYS WASH YOUR HANDS!
+
+watersink
+}>&2
+
+function monkey {
+cat <<monkeystore >&2
+
+    @
+     w  c(..)o   (
+      \__(-)    __)
+          /\   (
+         /(_)___)
+         w /|
+          | \   @
+         m  m  @@@  
+    ------------------
+
+monkeystore
+}
+
+while getopts :lcwm opt "$@"; do
+  case $opt in
+    l)
+      lulu
+      ;;
+    c)
+      catlitter
+      ;;
+    w)
+      water-sink
+      ;;
+    m)
+      monkey
+      ;;
+    *)
+      std
+      ;;
+	esac
+done
+if [ $OPTIND -eq 1 ]; then std ; fi
+
+
+sleep 0.5
+exec wc $@
