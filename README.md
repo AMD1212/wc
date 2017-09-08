@@ -2,8 +2,20 @@
 This script is a wrapper for the wc binary printing WC (lavatory) ascii art before doing the work
 
 ## Installation:
- TBD - provide a fast and easy revertible way to install it on computers of coworkers not locking them when leaving the room.
+### Download the script:
+    curl -o ~/.wc https://raw.githubusercontent.com/AMD1212/wc/master/wc
+    chmod +x ~/.wc
+### Set the alias:
+    echo $SHELL
+#### bash:
+    echo 'alias wc=~/.wc'>>~/.bashrc
+#### zsh:
+    echo 'alias wc=~/.wc'>>~/.zshrc
+#### ksh:
+    echo 'alias wc=~/.wc'>>~/.kshrc
 
+## Removal:
+    Undo what you did (CTRL-Z may not work)
 
 ## Usage: wc [OPTIONS]
 
