@@ -96,7 +96,7 @@ while getopts :lcwm opt "$@"; do
     *)
       std
       ;;
-	esac
+  esac
 done
 if [ $OPTIND -eq 1 ]; then std ; fi
 
